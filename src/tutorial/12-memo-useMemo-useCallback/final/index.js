@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react'
+import React, { useState, useCallback, useMemo, useEffect, useContext } from 'react'
 import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
 
 // ATTENTION!!!!!!!!!!
@@ -43,9 +43,9 @@ const Index = () => {
 }
 
 const BigList = React.memo(({ products, addToCart }) => {
-  // useEffect(() => {
-  //   console.count('hello from big list');
-  // });
+  useEffect(() => {
+    console.count('hello from big list');
+  });
 
   return (
     <section className='products'>

@@ -8,6 +8,7 @@ const UseRefBasics = () => {
   const refContainer = useRef(null);
 
   const handleSubmit = (e) => {
+    debugger
     e.preventDefault();
     console.log(refContainer.current.value);
   };
@@ -20,7 +21,10 @@ const UseRefBasics = () => {
     <>
       <form className='form' onSubmit={handleSubmit}>
         <div>
-          <input type='text' ref={refContainer} />
+          <input type='text' name="firstName" ref={refContainer} />
+        </div>
+        <div>
+          <input type='text' name="lastName" ref={refContainer} />
         </div>
         <button type='submit'>submit</button>
       </form>
